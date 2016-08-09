@@ -9,15 +9,24 @@ So, the whole point of throttling is to perform some action not more than N time
 during some period of time T.
 
 The following is a usage example:
+
 <code>
 Throttler t = new SequentialThrottler<>(13, 900, () -> {
+
             try {
+
                 Thread.sleep(Math.abs(ThreadLocalRandom.current().nextLong(12, 98)));
+
             } catch (InterruptedException e) {
+
                 e.printStackTrace();
+
             }
+
             System.err.print(" J. ");
+
         });
+
         t.doJob();
 </code>
 
