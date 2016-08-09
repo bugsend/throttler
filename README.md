@@ -21,7 +21,9 @@ Throttler t = new SequentialThrottler<>(13, 900, () -> {
         t.doJob();
 </code>
 
-Here: 13 - is how many times job is about to execute
-      900 - time range in milliseconds for job to being executed.
+Here: 
+
+      1. 13 - is how many times job is about to execute
+      2. 900 - time range in milliseconds for job to being executed.
 
 That's it.
